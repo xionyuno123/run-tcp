@@ -1,0 +1,22 @@
+[package]
+name = "run-tcp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+run-packet = { git = "https://github.com/run-rs/run.git", branch = "main" }
+run-dpdk-sys = { git = "https://github.com/run-rs/run.git", branch = "main" }
+run-dpdk = { git = "https://github.com/run-rs/run.git", branch = "main" }
+run-time = { git = "https://github.com/run-rs/run.git", branch = "main" }
+ctrlc = { version = "3.0", features = ["termination"]}
+arrayvec = "0.7.2"
+
+[[example]]
+name = "run_tx"
+path = "example/run_tx.rs"
+
+[[example]]
+name = "run_rx"
+path = "example/run_rx.rs"
